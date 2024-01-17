@@ -32,7 +32,7 @@ RSpec.describe UsersController, type: :controller do
       end
     end
 
-    context 'when college not found' do
+    context 'when colleges not found' do
       it 'returns a bad request status' do
         post :create, params: { college_id: 999 }
         expect(response).to have_http_status(:bad_request)
@@ -44,7 +44,7 @@ RSpec.describe UsersController, type: :controller do
       it 'returns a bad request status' do
         post :create, params: { college_id: college.id, exam_id: 999 }
         expect(response).to have_http_status(:bad_request)
-        expect(json_response['error']).to eq('Exam not found or does not belong to the college')
+        expect(json_response['error']).to eq('Exam not found or does not belong to the colleges')
       end
     end
 

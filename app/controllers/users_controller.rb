@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
   def validate_exam
     @exam = @college.exams.find(params[:exam_id])
-    raise 'Exam not found or does not belong to the college' unless @exam
+    raise 'Exam not found or does not belong to the colleges' unless @exam
   end
 
   def validate_request_params

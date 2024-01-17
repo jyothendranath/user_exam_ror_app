@@ -1,4 +1,4 @@
-class CollegeController < ApplicationController
+class CollegesController < ApplicationController
   before_action :set_college, only: [:show, :update, :destroy]
 
   def create
