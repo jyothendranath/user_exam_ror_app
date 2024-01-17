@@ -3,5 +3,10 @@ Rails.application.routes.draw do
 
   post '/user', to: 'users#create'
 
+  resources :colleges, only: [:create, :show, :update, :destroy]
+  resources :exams, only: [:create, :show, :update, :destroy]
+  resources :exam_windows, only: [:create, :show, :update, :destroy]
+
+
 end
 

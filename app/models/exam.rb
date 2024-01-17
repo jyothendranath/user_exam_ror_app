@@ -4,4 +4,9 @@ class Exam < ApplicationRecord
   has_one :exam_window
 
   has_many :users
+
+
+  validates :exam_name, presence: true
+
+  validates :college, presence: true
 end
